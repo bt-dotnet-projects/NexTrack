@@ -1,0 +1,50 @@
+# =========================
+# Visual Studio / WinUI
+# =========================
+
+# VS hidden folder (any depth, any project name)
+**/.vs/
+
+# Build output (any depth, any target framework/runtime)
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Solution/document layout caches (VS workspace state)
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# Build logs
+*.log
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# =========================
+# Optional (only if used)
+# =========================
+
+# Node (only if your project actually uses it)
+node_modules/
+
+# Environment files
+.env
+.env.*
+
+# Generated folders (only if applicable)
+dist/
