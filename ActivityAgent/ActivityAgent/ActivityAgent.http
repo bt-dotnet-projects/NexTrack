@@ -1,0 +1,6 @@
+@ActivityAgent_HostAddress = http://localhost:5056
+
+GET {{ActivityAgent_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

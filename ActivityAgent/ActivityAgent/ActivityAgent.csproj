@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Create Windows EXE -->
+		<OutputType>WinExe</OutputType>
+
+		<!-- Publish Settings -->
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<SelfContained>true</SelfContained>
+		<PublishSingleFile>true</PublishSingleFile>
+
+		<!-- Optional: Reduce file size -->
+		<PublishTrimmed>false</PublishTrimmed>
+	</PropertyGroup>
+
+	<!-- Include appsettings.json in publish -->
+	<ItemGroup>
+		<Content Include="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>
+				runtime; build; native; contentfiles; analyzers; buildtransitive
+			</IncludeAssets>
+		</PackageReference>
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.9" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>
+				runtime; build; native; contentfiles; analyzers; buildtransitive
+			</IncludeAssets>
+		</PackageReference>
+
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.9" />
+
+		<PackageReference Include="Microsoft.Win32.SystemEvents" Version="10.0.9" />
+
+		<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.9" />
+	</ItemGroup>
+
+</Project>
